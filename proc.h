@@ -26,12 +26,12 @@ struct	proc
 } proc[NPROC];
 
 /* stat codes */
-#define	SSLEEP	1		/* sleeping on high priority */
-#define	SWAIT	2		/* sleeping on low priority */
-#define	SRUN	3		/* running */
-#define	SIDL	4		/* intermediate state in process creation */
-#define	SZOMB	5		/* intermediate state in process termination */
-#define	SSTOP	6		/* process being traced */
+#define	SSLEEP	1		/* 잠자기, 실행 우선순위가 음수 값으로 슬립 중*/
+#define	SWAIT	2		/* 잠자기, 실행 우선순위가 0이상 값으로 슬립 중*/
+#define	SRUN	3		/* 실행 가능 상태 */
+#define	SIDL	4		/* 프로세스 생성 처리 중 */
+#define	SZOMB	5		/* 좀비 상태 */
+#define	SSTOP	6		/* 트레이스에 따르는 개입을 기다림*/
 
 /* flag codes */
 #define	SLOAD	01		/* in core */
